@@ -80,7 +80,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       ...producto,
       precio: Number(producto.precio) || 0,
       stock: Number(producto.stock) || 0,
-            precio_original: producto.precio_original ? Number(producto.precio_original) : null,
+      precio_original: producto.precio_original ? Number(producto.precio_original) || 0 : undefined,
     }
 
     console.log("🔍 DEBUG - Producto sanitizado:", sanitizedProducto)
